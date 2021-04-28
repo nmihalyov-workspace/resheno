@@ -1,1 +1,31 @@
 .header
+  padding: 25px 0
+  &__actions
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__contact
+    font:
+      size: 15px
+      weight: 700
+    &:first-child
+      margin-right: 55px
+    &:nth-child(2)
+      margin-right: 40px
+
+@media only screen and (max-width: $mobile)
+  .header
+    padding: 20px 0
+    &__logo
+      width: 94px
+    &__contact
+      &:first-child
+        margin-right: 20px
+    &__burger
+      width: 20px
+      height: 14px
+      background:
+        image: url('../img/icons/burger.svg')
+        size: contain
+        position: center
+        repeat: no-repeat

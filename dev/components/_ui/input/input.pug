@@ -1,4 +1,4 @@
-mixin input(type, label, name, placeholder, value, className, options)
+mixin input(type, label, name, placeholder, value, className, required, options)
   label.input(class=`${className || ''}`)
     if label.length
       p.input__label= label

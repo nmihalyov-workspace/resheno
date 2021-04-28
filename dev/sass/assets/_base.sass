@@ -9,11 +9,12 @@
 body
   width: 100%
   min-height: 100vh
-  line-height: 1.4
+  color: $black-1
+  line-height: 1.28
   @include font-fix
   font:
-    family: 'Montserrat', Helvetica, sans-serif
-    size: 18px
+    family: 'ProximaNova', Helvetica, sans-serif
+    size: 17px
     weight: 400
 
 p
@@ -23,31 +24,23 @@ h1, h2, h3, h4, h5, h6
   margin: 0
 
 a
-  color: $black
+  color: $violet
   transition: color .3s ease
   &:hover
-    color: transparentize($black, 0.2)
+    color: transparentize($violet, 0.2)
 
-.container
+.page-wrapper
+  overflow: hidden
+
+.wrapper
+  max-width: 1122px
   width: 100%
-  .wrapper
-    max-width: 1200px
-    width: 100%
-    margin: 0 auto
-    padding: 0 30px
-
-@media only screen and (max-width: $tablet)
-  body
-    font-size: 16px
-  .container
-    .wrapper
-      max-width: 768px
-      padding: 0 20px
+  margin: 0 auto
 
 @media only screen and (max-width: $mobile)
   body
     font-size: 14px
-  .container
-    .wrapper
-      max-width: 320px
-      padding: 0 10px
+
+  .wrapper
+    max-width: 500px
+    margin: 0 auto

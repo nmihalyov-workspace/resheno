@@ -1,0 +1,77 @@
+.request
+  padding: 180px 0 95px
+  background-color: $violet
+  color: #fff
+  &__heading
+    margin-bottom: 110px
+    line-height: 1
+    font:
+      size: 50px
+      weight: 700
+  &__steps
+    margin-bottom: 120px
+  &__step
+    &-icon
+      position: relative
+      width: 64px
+      height: 56px
+      margin-left: 55px
+      margin-bottom: 25px
+      background:
+        size: contain
+        position: left center
+        repeat: no-repeat
+      &[data-icon="request"]
+        background-image: url('../img/icons/request.svg')
+      &[data-icon="details"]
+        background-image: url('../img/icons/details.svg')
+      &[data-icon="fee"]
+        background-image: url('../img/icons/fee.svg')
+      &[data-icon="done"]
+        background-image: url('../img/icons/done.svg')
+    &-num
+      position: absolute
+      top: 0
+      left: 76px
+      width: 23px
+      height: 23px
+      padding: 5px 0 4px
+      background-color: $green
+      border-radius: 50%
+      color: $black-1
+      text-align: center
+      font-size: 11px
+    &-desc
+      line-height: 1
+      font:
+        size: 25px
+        weight: 700
+  &__center
+    display: flex
+    justify-content: center
+  &__submit
+    margin: 54px auto 30px
+
+@media only screen and (max-width: $mobile)
+  .request
+    padding: 45px 0 60px
+    &__heading
+      margin-bottom: 40px
+      line-height: 1.36
+      font-size: 22px
+    &__steps
+      margin-bottom: 20px
+    &__step
+      margin-bottom: 40px
+      &-icon
+        margin-left: 0
+      &-num
+        top: 10px
+      &-desc
+        line-height: 1.25
+        font-size: 22px
+    &__form
+      &-input
+        margin-bottom: 25px
+    &__submit
+      margin: 0 0 25px

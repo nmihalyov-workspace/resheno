@@ -1,0 +1,46 @@
+include ../_ui/input/input
+include ../_ui/checkbox/checkbox
+
+mixin request
+  section.request.container-fluid
+    .request__wrapper.wrapper
+      .row
+        .col.hide-lg
+          h2.request__heading Оставьте заявку и получите ваш полис каско
+        .col.hide.show-lg
+          h2.request__heading Оставьте заявку и&nbsp;мы подберем самый выгодный тариф для вашего бизнеса
+      .request__steps.row
+        .col.col-lg-12
+          .request__step
+            .request__step-icon(data-icon="request")
+              p.request__step-num 1
+            p.request__step-desc Оставьте заявку
+        .col.col-lg-12
+          .request__step
+            .request__step-icon(data-icon="details")
+              p.request__step-num 2
+            p.request__step-desc Менеджер свяжется&nbsp;с вами, чтобы согласовать все детали*
+        .col.col-lg-12
+          .request__step
+            .request__step-icon(data-icon="fee")
+              p.request__step-num 3
+            p.request__step-desc Получите ссылку на&nbsp;оплату или счет (для юр. лиц и ИП)
+        .col.col-lg-12
+          .request__step
+            .request__step-icon(data-icon="done")
+              p.request__step-num 4
+            p.request__step-desc Оплатите и получите полис на ваш e-mail**
+      form.request__form(action="") 
+        .row
+          .col.col-lg-12
+            +input('text', '', 'name', 'Введите ваше имя', '', 'request__form-input', true)
+          .col.col-lg-12
+            +input('text', '', 'tel', 'Введите телефон', '', 'request__form-input', true)
+          .col.col-lg-12
+            +input('email', '', 'email', 'Введите ваш e-mail', '', 'request__form-input', true)
+        .row
+          .col.request__center
+            +button('primary', 'submit', 'Отправить заявку', 'request__submit')
+        .row
+          .col.request__center
+            +checkbox('Согласен с обработкой персональных данных', 'policy', '', true, true)

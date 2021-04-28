@@ -1,0 +1,39 @@
+.about
+  padding: 240px 0
+  background-color: $violet
+  color: #fff
+  &__heading
+    margin-bottom: 12px
+    line-height: 1
+    font:
+      size: 51px
+      weight: 700
+  &__desc
+    max-width: 560px
+  &__logos
+    hr
+      height: 3px
+      margin: 38px 0 29px
+      background-color: #fff
+
+@media only screen and (max-width: $mobile)
+  .about
+    padding: 40px 0 60px
+    .row
+      flex-direction: column-reverse
+    &__heading
+      margin-bottom: 10px
+      font-size: 22px
+    &__desc
+      font-size: 11px
+    &__logos
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 35px
+      hr
+        width: 1px
+        height: 105px
+        margin: 0 30px
+    &__logo
+      width: 105px

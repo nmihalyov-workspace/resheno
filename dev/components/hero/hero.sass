@@ -1,0 +1,104 @@
+.hero
+  padding: 50px 0 40px
+  &__card
+    display: none
+  &__heading
+    margin-bottom: 15px
+    line-height: 1
+    font:
+      size: 59px
+      weight: 700
+  &__desc
+    max-width: 425px
+    margin-bottom: 30px
+    color: $violet
+    line-height: 1.218
+    font:
+      size: 22px
+      weight: 600
+  &__tags
+    &-inner
+      display: flex
+      margin-right: -60px
+      &:not(:first-child)
+        display: none
+  &__tag
+    margin: 0 14px 12px 0
+    padding: 12px 30px
+    border-radius: 50px
+    background-color: $grey
+    letter-spacing: 0.03em
+    font:
+      size: 14px
+      weight: 700
+  &__btn
+    margin-top: 38px
+  &__image
+    margin-right: -30px
+
+@media only screen and (max-width: $mobile)
+  .hero
+    padding: 5px 0 50px
+    .col
+      z-index: 2
+      position: relative
+    &__wrapper
+      position: relative
+    &__card
+      z-index: 1
+      position: absolute
+      top: -10px
+      right: -137px
+      display: block
+      width: 316px
+      height: 267px
+      background:
+        image: url('../img/hero-mobile.png')
+        position: center
+        size: contain
+        repeat: no-repeat
+    &__heading
+      max-width: 190px
+      margin-bottom: 25px
+      line-height: 0.88
+      font-size: 25px
+    &__desc
+      max-width: 130px
+      margin-bottom: 70px
+      font-size: 10px
+    &__tags
+      overflow: hidden
+      width: calc(100% + 32px)
+      position: relative
+      white-space: nowrap
+      margin: 0 -16px
+      padding: 0 16px
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
+      &:nth-child(odd)
+        .hero__tags-inner
+          animation: tag-left 10s linear infinite
+      &:nth-child(even)
+        .hero__tags-inner
+          animation: tag-right 7s linear infinite
+      &-inner
+        display: inline-flex
+        margin-right: 0
+        &:not(:first-child)
+          display: inline-flex
+
+@keyframes tag-left
+  0%,
+  100%,
+    transform: translateX(0)
+  99.99999%
+    transform: translateX(-100%)
+
+@keyframes tag-right
+  0%,
+  100%,
+    transform: translateX(-100%)
+  99.99999%
+    transform: translateX(0)

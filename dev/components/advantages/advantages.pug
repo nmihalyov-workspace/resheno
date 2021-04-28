@@ -1,0 +1,56 @@
+include ../_ui/button/button
+
+mixin advantages
+  section.advantages.container-fluid
+    .advantages__wrapper.wrapper
+      .row
+        .col-9
+          h2.advantages__heading Преимущества страхования через РЕШЕНО.
+      .advantages__questions.row.row-between.row-stretch
+        .col
+          .advantages__question
+            p.advantages__question-heading Как оплатить полис?
+            p.advantages__question-answer Куратор РЕШЕНО в РЕСО/ВСК или сотрудник ППР пришлет вам счет от страховой компании.<br><br>Юридические лица получают счет или ссылку на оплату банковской картой.<br><br>Физические лица получают ссылку на оплату банковской картой.
+            img.advantages__question-image(src="img/advantages-1.svg", alt="")
+        .col
+          .advantages__question
+            p.advantages__question-heading Как будет доставлен полис?
+            p.advantages__question-answer Вы получите электронный полис, который имеет равную юридическую силу с бумажной версией, по адресу электронной почты, указанному в заявке.
+            img.advantages__question-image(src="img/advantages-2.svg", alt="")
+        .col
+          .advantages__question
+            p.advantages__question-heading Как получить поддержку?
+            p.advantages__question-answer По телефонным номерам страховой компании, указанным в полисе.
+            img.advantages__question-image(src="img/advantages-3.svg", alt="")
+      .row.row-between.row-stretch
+        .col.col-lg-12
+          .advantages__sale
+            h3.advantages__sale-heading Получите скидку 10%
+            .advantages__sale-seal
+            +button('primary', 'link', 'Получить скидку 10%', 'advantages__sale-btn', {link: '#'})
+        .col.col-lg-12
+          .advantages__item
+            .advantages__item-icon(data-icon="sale")
+            h4.advantages__item-heading 10%-скидка на&nbsp;страхование каско
+            p.advantages__item-desc Сэкономьте 10% на страховку КАСКО
+          .advantages__item
+            .advantages__item-icon(data-icon="manager")
+            h4.advantages__item-heading Персональный менеджер&nbsp;в течение всего срока страхования
+            p.advantages__item-desc Наши специалисты работают 24/7. Помогут вам в любой сложившейся ситуации.
+          .advantages__item
+            .advantages__item-icon(data-icon="settlement")
+            h4.advantages__item-heading Удаленное урегулирование убытков
+            p.advantages__item-desc Решайте вопросы онлайн через удобный личный кабинет. Экономьте свое время.
+        .col.col-lg-12
+          .advantages__item
+            .advantages__item-icon(data-icon="tariff")
+            h4.advantages__item-heading Выгодный тариф <br>по осаго
+            p.advantages__item-desc Выгодные тарифы доступны прямо сейчас. Убедитесь сами!
+          .advantages__item
+            .advantages__item-icon(data-icon="delivery")
+            h4.advantages__item-heading Мгновенная доставка полисов
+            p.advantages__item-desc Получите полис сразу же после оплаты на e-mail. Электронный полис по юридической силе ничем не отличается от обычного бумажного.
+          .advantages__item
+            .advantages__item-icon(data-icon="visit")
+            h4.advantages__item-heading Выезд специалиста для осмотра автомобиля
+            p.advantages__item-desc Вам больше не нужно искать специалистов со стороны. Позвольте нам позаботиться об этом.

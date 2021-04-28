@@ -1,0 +1,30 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.container-fluid
+    .hero__wrapper.wrapper
+      .row.row-middle
+        .hero__card
+        .col
+          h1.hero__heading Скидка 10% на&nbsp;страхование каско
+          p.hero__desc И выгодный тариф по ОСАГО от&nbsp;наших&nbsp;друзей — РЕСО-Гарантия и ВСК
+          .hero__tags
+            .hero__tags-inner
+              p.hero__tag Электронный полис
+              p.hero__tag Удаленное урегулирование убытков
+            .hero__tags-inner
+              p.hero__tag Электронный полис
+              p.hero__tag Удаленное урегулирование убытков
+            .hero__tags-inner
+              p.hero__tag Электронный полис
+              p.hero__tag Удаленное урегулирование убытков
+          .hero__tags
+            .hero__tags-inner
+              p.hero__tag Выезд специалиста для осмотра автомобиля
+            .hero__tags-inner
+              p.hero__tag Выезд специалиста для осмотра автомобиля
+            .hero__tags-inner
+              p.hero__tag Выезд специалиста для осмотра автомобиля
+          +button('primary', 'link', 'Оставить заявку', 'hero__btn', {link: '#'})
+        .col.hide-lg
+          img.hero__image(src="img/hero-img.png", alt="")
