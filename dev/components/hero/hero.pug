@@ -1,6 +1,6 @@
 include ../_ui/button/button
 
-mixin hero
+mixin hero-insurance
   section.hero.container-fluid
     .hero__wrapper.wrapper
       .row.row-middle
@@ -28,3 +28,47 @@ mixin hero
           +button('primary', 'link', 'Оставить заявку', 'hero__btn', {link: '#'})
         .col.hide-lg
           img.hero__image(src="img/hero-img.png", alt="")
+          
+mixin hero-card
+  section.hero.hero--card.container-fluid
+    .hero__wrapper.wrapper
+      .row.row-middle
+        .hero__card
+        .col-7.col-lg
+          h1.hero__heading.hero__heading--card Топливная карта 
+            img.hero__heading-logo(src="img/logo.svg", alt="")
+          p.hero__desc.hero__desc--card для юридических лиц и ИП
+          .hero__tags.hide-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Скидки до 1,5 Р с литра на все виды топлива!
+          .hero__tags.hide-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Безналичный расчет
+              p.hero__tag.hero__tag--card Контроль и управление расходами
+          .hero__tags.hide-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Более 13 000 АЗС по всей России
+              p.hero__tag.hero__tag--card Экономия на топливе до 30%
+          .hero__tags.hide-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Отсрочка платежа до 30 дней*
+
+          .hero__tags.hide.show-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Скидки до 1,5 Р с литра на все виды топлива!
+              p.hero__tag.hero__tag--card Безналичный расчет
+              p.hero__tag.hero__tag--card Контроль и управление расходами
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Скидки до 1,5 Р с литра на все виды топлива!
+              p.hero__tag.hero__tag--card Безналичный расчет
+              p.hero__tag.hero__tag--card Контроль и управление расходами
+          .hero__tags.hide.show-lg
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Более 13 000 АЗС по всей России
+              p.hero__tag.hero__tag--card Экономия на топливе до 30%
+              p.hero__tag.hero__tag--card Отсрочка платежа до 30 дней*
+            .hero__tags-inner
+              p.hero__tag.hero__tag--card Более 13 000 АЗС по всей России
+              p.hero__tag.hero__tag--card Экономия на топливе до 30%
+              p.hero__tag.hero__tag--card Отсрочка платежа до 30 дней*
+          +button('primary', 'link', 'Оставить заявку', 'hero__btn hero__btn--card', {link: '#'})

@@ -1,7 +1,7 @@
 include ../_ui/input/input
 include ../_ui/checkbox/checkbox
 
-mixin request
+mixin request-insurance
   section.request.container-fluid
     .request__wrapper.wrapper
       .row
@@ -19,7 +19,7 @@ mixin request
           .request__step
             .request__step-icon(data-icon="details")
               p.request__step-num 2
-            p.request__step-desc Менеджер свяжется&nbsp;с вами, чтобы согласовать все детали*
+            p.request__step-desc Менеджер свяжется&nbsp;с&nbsp;вами, чтобы согласовать все детали*
         .col.col-lg-12
           .request__step
             .request__step-icon(data-icon="fee")
@@ -44,3 +44,20 @@ mixin request
         .row
           .col.request__center
             +checkbox('Согласен с обработкой персональных данных', 'policy', '', true, true)
+
+mixin request-card
+  section.request.request--card.container-fluid
+    .request__wrapper.wrapper
+      .row
+        .col
+          h2.request__heading.request__heading--card Оставьте заявку и мы подберем самый <br>выгодный тариф для вашего бизнеса
+      .row.row-middle
+        .col-7.col-lg-12
+          form.request__form.request__form--card(action="") 
+            +input('text', '', 'name', 'Введите ваше имя', '', 'request__form-input', true)
+            +input('text', '', 'tel', 'Введите телефон', '', 'request__form-input', true)
+            +input('email', '', 'email', 'Введите ваш e-mail', '', 'request__form-input', true)
+            +button('primary', 'submit', 'Отправить заявку', 'request__submit')
+            +checkbox('Согласен с обработкой персональных данных', 'policy', '', true, true)
+        .col-5.col-lg-12
+          img.request__card(src="img/card.png", alt="")

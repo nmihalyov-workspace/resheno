@@ -1,0 +1,28 @@
+include ../components/header/header
+include ../components/hero/hero
+include ../components/sale/sale
+include ../components/calc/calc
+include ../components/edges/edges
+include ../components/net/net
+include ../components/request/request
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Решено
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header('Заказать карту')
+      +hero-card
+      +sale
+      +calc
+      +edges
+      +net
+      +request-card
+      +footer
+    +popup('calc')

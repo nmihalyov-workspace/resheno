@@ -1,0 +1,13 @@
+include ../_ui/button/button
+
+mixin calc
+  section.calc.container-fluid
+    .calc__wrapper.wrapper
+      .row.row-middle
+        .col-5.col-lg-12
+          h2.calc__heading Рассчитайте экономию в&nbsp;нашем калькуляторе
+          +button('primary', 'popup', 'Рассчитать экономию', 'calc__btn', {popup: 'calc'})
+        .col-7.col-lg-12
+          img.calc__img(src="img/calc.png", alt="")
+        .col-12.hide.show-lg
+          +button('primary', 'popup', 'Рассчитать экономию', 'calc__btn', {popup: 'calc'})

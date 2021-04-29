@@ -1,0 +1,17 @@
+include ../_ui/button/button
+
+mixin net
+  section.net.container-fluid
+    .net__wrapper.wrapper
+      .row
+        .col
+          h2.net__heading Самая большая <br>сеть приема в режиме онлайн - более 13 000 АЗС по&nbsp;всей&nbsp;России
+          +button('primary', 'link', 'Посмотреть список азс на карте', 'net__btn', {link: '#'})
+          .net__logos
+            img.net__logo(src="img/logos/rosneft.svg", alt="")
+            img.net__logo(src="img/logos/lukoil.svg", alt="")
+            img.net__logo(src="img/logos/gazprom.svg", alt="")
+            img.net__logo(src="img/logos/shell.svg", alt="")
+            img.net__logo(src="img/logos/bashneft.svg", alt="")
+            img.net__logo(src="img/logos/tnk.svg", alt="")
+            img.net__logo(src="img/logos/tatneft.svg", alt="")

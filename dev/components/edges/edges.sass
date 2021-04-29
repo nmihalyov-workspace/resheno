@@ -1,0 +1,117 @@
+.edges
+  padding: 70px 0 70px
+  background-color: $violet
+  color: #fff
+  &__heading
+    margin-bottom: 90px
+    text-align: center
+    line-height: 1
+    font:
+      size: 51px
+      weight: 700
+  &__item
+    margin-bottom: 100px
+    cursor: pointer
+    &--active
+      position: relative
+      color: $black-1
+      &:before
+        z-index: 1
+        content: ''
+        position: absolute
+        left: -44px
+        top: -20px
+        width: calc(100% + 84px)
+        height: calc(100% + 50px)
+        background-color: #fff
+        border-radius: 30px
+      & > *
+        z-index: 2
+        position: relative
+      .edges__item
+        &-heading
+          &::after
+            transform: rotate(90deg)
+        &-content
+          display: block
+    &-icon
+      margin-bottom: 20px
+      height: 78px
+      background:
+        position: left center
+        repeat: no-repeat
+      &[data-icon="cashless"]
+        background-image: url('../img/icons/cashless.svg')
+      &[data-icon="economy"]
+        background-image: url('../img/icons/economy.svg')
+      &[data-icon="control"]
+        background-image: url('../img/icons/control.svg')
+      &[data-icon="postponement"]
+        background-image: url('../img/icons/postponement.svg')
+      &[data-icon="services"]
+        background-image: url('../img/icons/services.svg')
+      &[data-icon="support"]
+        background-image: url('../img/icons/support.svg')
+    &-heading
+      position: relative
+      max-width: 255px
+      display: inline-block
+      line-height: 1
+      font:
+        size: 25px
+        weight: 700
+      &:after
+        content: ''
+        position: absolute
+        top: 5px
+        right: -20px
+        width: 8px
+        height: 14px
+        background:
+          image: url('../img/icons/chevron.svg')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-content
+      display: none
+    &-list
+      margin: 10px 0 0
+      padding-left: 17px
+      &-item
+        position: relative
+        list-style: none
+        line-height: 1
+        font-size: 11px
+        &:not(:last-child)
+          margin-bottom: 10px
+        &:before
+          content: ''
+          position: absolute
+          left: -17px
+          top: 3px
+          width: 7px
+          height: 3px
+          border-radius: 3px
+          background-color: $green
+
+@media only screen and (max-width: $mobile)
+  .edges
+    padding: 40px 0
+    &__heading
+      margin-bottom: 45px
+      text-align: left
+      font-size: 25px
+    &__item
+      margin-bottom: 45px
+      &--active
+        &:before
+          left: -70px
+      &-icon
+        height: 84px
+        margin-bottom: 16px
+      &-heading
+        display: block
+        max-width: 100%
+        padding-right: 10px
+        &:after
+          right: 0

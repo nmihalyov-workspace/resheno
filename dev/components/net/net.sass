@@ -1,0 +1,46 @@
+.net
+  padding: 202px 0 98px
+  background: 
+    image: url('../img/map.svg')
+    position: calc(50vw - 20px) 15px
+    repeat: no-repeat
+  &__heading
+    max-width: 656px
+    margin-bottom: 80px
+    line-height: 1
+    font:
+      size: 51px
+      weight: 700
+    br
+      display: none
+  &__logos
+    display: flex
+    align-items: flex-end
+    margin-top: 75px
+  &__logo
+    margin-right: 69px
+
+@media only screen and (max-width: $mobile)
+  .net
+    padding: 247px 0 47px
+    background:
+      position: calc(50vw + 50%) 0
+      size: 598px
+    &__heading
+      max-width: 270px
+      margin-bottom: 26px
+      font-size: 21px
+      br
+        display: block
+    &__btn
+      padding-left: 20px
+      padding-right: 20px
+    &__logos
+      margin-top: 37px
+      justify-content: space-between
+    &__logo
+      max-width: 22px
+      max-height: 22px
+      margin-right: 0
+      &:nth-child(6)
+        max-width: 29px

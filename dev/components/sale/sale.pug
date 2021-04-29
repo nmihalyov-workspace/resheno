@@ -1,0 +1,15 @@
+include ../_ui/button/button
+
+mixin sale
+  section.sale.container-fluid
+    .sale__wrapper.wrapper
+      .row
+        .col-5.col-lg
+          h2.sale__heading Скидка до 1,5 рублей с&nbsp;литра на&nbsp;все виды топлива!
+          p.sale__desc Успейте оформить договор до&nbsp;28.05.2021!**
+          +button('primary', 'link', 'Заказать&nbsp;<span>карты</span>&nbsp;на специальных условиях', 'sale__btn', {link: '#'})
+          p.sale__disclaimer Бесплатные дополнительные сервисы: оплата через мобильное приложение, личный кабинет, смс-уведомления, предупреждения по картам
+        .col-7.col-lg
+          .sale__box
+            p.sale__vert Скидка до
+            .sale__value

@@ -1,22 +1,49 @@
 include ../../_ui/input/input
+include ../../_ui/radio/radio
 include ../../_ui/button/button
 
 mixin popup(type, id = type)
-  .popup.js-popup.js-close-popup(data-popup=id)
+  .popup.js-popup(data-popup=id)
     .popup__backdrop
     .popup__container
       .popup__wrapper
         .popup__window
           .popup__close.js-close-popup
-          if type === 'form'
-            form.popup__form(action="")
-              p(style="margin-bottom: 20px; text-align: center") Форма входа
-              div(style="margin-bottom: 10px;")
-                +input('email', 'E-mail:', 'email', 'Введите ваш e-mail', '', '', {error: 'Неверные данные'})
-              div(style="margin-bottom: 20px;")
-                +input('password', 'Пароль:', 'password', 'Введите ваш пароль', '', '', {error: 'Неверные данные'})
-              div(style="display: flex; justify-content: center;")
-                div(style="margin: 0 5px;")
-                  +button('primary', 'submit', 'Войти')
-                div(style="margin: 0 5px;")
-                  +button('secondary', 'link', 'Закрыть', 'js-close-popup', {link: '#'})
+          if type === 'calc'
+            form.popup__calc(action="")
+              .row
+                .col
+                  h2.popup__calc-heading Рассчитайте экономию в нашем калькуляторе
+              .row
+                .col
+                  .popup__calc-group
+                    +input('text', 'Сколько у вас машин?', 'cars')
+              .row
+                .col
+                  .popup__calc-group
+                    p.popup__calc-label Каких машин больше?
+                    .popup__calc-radios
+                      +radio('Грузовых', 'type', 'cargo', 'popup__calc-radio', true, true)
+                      +radio('Леговых', 'type', 'passenger', 'popup__calc-radio', true, false)
+                      +radio('Одинаково', 'type', 'both', 'popup__calc-radio', true, false)
+              .row
+                .col
+                  .popup__calc-group
+                    +input('text', 'Среднее потребление на машину:', 'consumption')
+              .row
+                .col
+                  .popup__calc-group
+                    p.popup__calc-label Ваша компания платит НДС?
+                    .popup__calc-radios
+                      +radio('Да', 'vat', 'yes', 'popup__calc-radio', true, true)
+                      +radio('Нет', 'vat', 'no', 'popup__calc-radio', true, false)
+              .row
+                .col
+                  .popup__calc-group
+                    p.popup__calc-label У вас есть топливные карты?
+                    .popup__calc-radios
+                      +radio('Да', 'cards', 'yes', 'popup__calc-radio', true, true)
+                      +radio('Нет', 'cards', 'no', 'popup__calc-radio', true, false)
+              .row
+                .col
+                  +button('primary', 'submit', 'Рассчитать экономию', 'popup__calc-submit')

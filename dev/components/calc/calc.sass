@@ -1,0 +1,28 @@
+.calc
+  padding: 110px 0 115px
+  &__heading
+    margin-bottom: 60px
+    line-height: 1
+    font:
+      size: 51px
+      weight: 700
+  &__btn
+    width: 265px
+  &__img
+    display: block
+    margin-left: auto
+
+@media only screen and (max-width: $mobile)
+  .calc
+    padding: 42px 0 48px
+    &__heading
+      max-width: 250px
+      margin-bottom: 30px
+      font-size: 22px
+      & + .calc__btn
+        display: none
+    &__btn
+      width: 100%
+    &__img
+      width: 100%
+      margin-bottom: 20px

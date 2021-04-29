@@ -1,6 +1,6 @@
 include ../_ui/button/button
 
-mixin header
+mixin header(btnText)
   header.header.container-fluid
     .header__wrapper.wrapper
       .row
@@ -14,4 +14,4 @@ mixin header
           .header__actions
             p.header__contact sales@resheno.ru
             p.header__contact 8 (800) 222-06-45
-            +button('secondary', 'link', 'Оставить заявку', '', {link: '#'})
+            +button('secondary', 'link', btnText, '', {link: '#'})

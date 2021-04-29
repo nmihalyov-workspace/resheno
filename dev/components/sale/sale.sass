@@ -1,0 +1,71 @@
+.sale
+  padding: 140px 0 125px
+  background-color: $violet
+  color: #fff
+  &__heading
+    margin-bottom: 36px
+    line-height: 1
+    font:
+      size: 51px
+      weight: 700
+  &__desc
+    margin-bottom: 73px
+    line-height: 1.218
+    font:
+      size: 25px
+      weight: 700
+  &__btn
+    letter-spacing: normal
+  &__disclaimer
+    max-width: 370px
+    margin-top: 47px
+    line-height: 1.218
+    font-size: 12px
+  &__box
+    display: flex
+  &__vert
+    margin-right: 20px
+    writing-mode: vertical-lr
+    text-orientation: mixed
+    transform: rotate(180deg)
+    white-space: nowrap
+    line-height: 1
+    font:
+      size: 105px
+      weight: 700
+  &__value
+    width: 498px
+    height: 498px
+    background:
+      image: url('../img/sale-value.svg')
+      position: center
+      size: contain
+      repeat: no-repeat
+
+@media only screen and (max-width: $mobile)
+  .sale
+    padding: 47px 0 48px
+    .row
+      flex-direction: column-reverse
+    &__heading
+      margin-top: 20px
+      margin-bottom: 15px
+      font-size: 22px
+    &__desc
+      max-width: 200px
+      margin-bottom: 24px
+      font-size: 15px
+    &__btn
+      padding-left: 30px
+      padding-right: 30px
+      span
+        display: none
+    &__disclaimer
+      display: none
+    &__vert
+      margin-right: 10px
+      font-size: 46px
+    &__value
+      width: 225px
+      height: auto
+      padding-top: 225px

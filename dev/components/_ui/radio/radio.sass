@@ -1,0 +1,44 @@
+.radio
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-start
+  cursor: pointer
+  &:hover
+    .radio__box
+      border-color: $violet
+  &__input
+    opacity: 0
+    visibility: hidden
+    width: 0
+    height: 0
+    margin: 0
+    &:checked ~ .radio__box
+      border-color: $violet
+      &:after
+        opacity: 1
+  &__box
+    position: relative
+    flex-shrink: 0
+    width: 20px
+    height: 20px
+    margin-right: 4px
+    border: 2px solid transparentize(#010101, 0.46)
+    border-radius: 50%
+    transition: border-color .3s ease
+    &:after
+      opacity: 0
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 10px
+      height: 10px
+      position: absolute
+      background-color: $violet
+      border-radius: 50%
+      transform: translate(-50%, -50%)
+      transition: opacity .3s ease
+  &__text
+    padding-top: 5px
+    line-height: 1
+    font-size: 11px
